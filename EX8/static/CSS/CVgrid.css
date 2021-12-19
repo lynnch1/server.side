@@ -1,0 +1,114 @@
+.grid-container{
+    display: grid;
+    grid-template-areas:
+    'header header'
+    'left right'
+    'left right';
+}
+
+:root{
+    --headerColor: rgb(146, 94, 94);
+    --leftColor: rgb(184, 142, 142);
+    --rightColor: rgb(212, 174, 174);
+}
+
+.header{
+    grid-area: header;
+    font-size: 25px;
+    text-align: center;
+    background-color: var(--headerColor);
+    padding: 5px;
+    border: 10px solid wheat;
+    margin: 5px;
+    animation-name: headerTitle;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    border-radius: 100px;
+}
+
+@keyframes headerTitle {
+    0% {background-color: var(--headerColor);}
+    50% {background-color: white;}
+    100% {background-color: var(--headerColor);}
+}
+
+.left{
+    grid-area: left;
+    font-size: 35px;
+    background-color: var(--leftColor);
+    width: 47vw;
+    padding: 5px;
+    border: 10px solid wheat;
+    margin: 5px;
+    animation-name: leftTitles;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    border-radius: 50px;
+}
+
+@keyframes leftTitles {
+    0% {background-color: var(--leftColor);}
+    50% {background-color: white;}
+    100% {background-color: var(--leftColor);}
+}
+
+.right{
+    grid-area: right;
+    font-size: 35px;
+    background-color: var(--rightColor);
+    width: 47vw;
+    padding: 5px;
+    border: 10px solid wheat;
+    margin: 5px;
+    animation-name: rightTitles;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    border-radius: 50px;
+}
+
+@keyframes rightTitles {
+    0% {background-color: var(--rightColor);}
+    50% {background-color: white;}
+    100% {background-color: var(--rightColor);}
+}
+
+form{
+    font-size: 25px;
+}
+
+input {
+  padding: 5px;
+  border-radius:8px;
+}
+
+#submitButton{
+    width: 70px;
+    height: 30px;
+    padding: 5px;
+    border-radius:8px;
+}
+
+@media only screen and (max-width: 600px) {
+    .grid-container{
+        display: grid;
+        grid-template-areas:
+        'header header'
+        'left left'
+        'right right';
+    }
+
+    .header{
+    font-size: 20px ;
+    }
+    .left{
+        font-size: 25px;
+        height: 30vh;
+        width: 97vw;
+    }
+    
+    .right{
+        font-size: 20px;
+        height: 30vh;
+        width: 97vw;
+    }
+}

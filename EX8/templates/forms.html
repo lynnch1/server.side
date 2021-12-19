@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEB course exercise 3, forms and css</title>
+     <link rel="stylesheet" href="/static/CSS/style.css">
+</head>
+<body>
+{% include 'header.html' %}
+    <form class=info>
+        <h1>Hello! sign up to my website:</h1>
+        <label for="Fname">First name:</label>
+        <input type="text" id="Fname" name="Fname" required><br><br>
+        <label for="Lname">Last name:</label>
+        <input type="text" id="Lname" name="Lname"><br><br>
+        <label for="Email">Email:</label>
+        <input type="Email" id="Email" name="Email" required><br><br>
+        <label for="Bday">Birthday:</label>
+        <input type="date" id="Bday" name="Bday"><br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" minlength="4" maxlength="10" required><br><br>
+        <input onclick="myFunction()" type="submit" value="submit"><br>
+    </form>
+        <h2>want to learn more? contact me:</h2>
+        <form class="info">
+        <label for="Fname">First name:</label>
+        <input type="text" id="Fname" name="Fname"><br><br>
+        <label for="comment">Your comment:</label><br>
+        <textarea id="comment" name="comment" cols="20" rows="5"></textarea><br><br>
+        <input type="submit" value="submit">
+</form>
+</body>
+</html>

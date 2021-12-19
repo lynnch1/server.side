@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Assignment 8
+{% endblock %}
+
+{% block tohen %}
+
+{{ super() }}
+<h2>Here is a list of my hobbies</h2>
+    <h3>do you know which one I spend most of my free time doing?</h3>
+<ul>
+    {% for hobby in hobbies %}
+        <li> {{ hobby }} </li>
+    {% endfor %}
+</ul>
+
+    <h3>Hobby: {{ hobby | default('unknown', true) | upper() }}</h3>
+
+{% if hobby=='sleeping' %}
+    <h3>yes I spend most of my free time sleeping!</h3>
+    {% else %}
+        <h3>maybe next time you will guess correctly!</h3>
+{% endif %}
+
+{% endblock %}

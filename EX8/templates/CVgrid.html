@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GridEx</title>
+    <link rel="stylesheet" href="/static/CSS/CVgrid.css">
+    <script src=/static/JS/CVgrid.js"></script>
+</head>
+
+<body>
+{% include 'header.html' %}
+    <div class="grid-container">
+        <div class="header">
+            <h1>Lynn Chanan</h1>
+            <h2>Fourth year Industrial Engineering student</h2>
+        </div>
+        <div class="left"><br>
+            <div id="AboutMe">About Me</div><br><br>
+            <div id="ContactInfo"><u>Contact Me</u><br><br>
+                <form>
+                    <label for="Fname">First name:</label>
+                    <input type="text" id="Fname" name="Fname" required><br>
+                    <label for="Lname">Last name:</label>
+                    <input type="text" id="Lname" name="Lname"><br>
+                    <label for="Email">Email:</label>
+                    <input type="Email" id="Email" name="Email" minlength="12" required><br>
+                    <button id="submitButton" onclick="myFunction()">Submit</button><br><br>
+                </form>
+            </div>
+        </div>
+        <div class="right"><br>
+            <div id="WorkEx">Work Experience</div><br><br>
+            <div id="EduHis">Education History</div><br><br>
+            <div id="MiliSer"> Military Service</div><br>
+        </div>
+    </div>
+
+</body>
+
+</html>
