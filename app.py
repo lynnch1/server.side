@@ -9,9 +9,9 @@ def main_func():
     return 'Hello, This is the main page!'
 
 
-@app.route('/about')
-def about_func():
-    return 'My name is Lynn, I am a fourth year Industrial Engineering student'
+@app.route('/contact')
+def contact_func():
+    return render_template('contact.html')
 
 
 @app.route('/me')

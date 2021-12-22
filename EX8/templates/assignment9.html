@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Assignment 9
+{% endblock %}
+
+{% block tohen %}
+    <h1>Welcome to Assignment 9 Page!</h1>
+<h2>Search by name or email to find yourself, or only click search to see all users</h2>
+<form name="SearchForm" action="/Assignment9" method="GET">
+    Search: <input name="Search" type="text">
+            <input class="submit" type="submit" value="search">
+
+</form>
+
+{% if users %}<br>
+    {% for user in users.values() %}
+        {% for i in user %}
+            {{ i }}: {{ user[i]}} <br>
+        {% endfor %}<br>
+    {% endfor %}
+{% endif %}
+
+{% if userFound %}
+    <h3>Name: {{ userFound['name'] }}</h3>
+    <h3>Email: {{ userFound['email'] }}</h3>
+{% endif %}
+
+{% if NotFound  %}
+    <h3>{{ NotFound }}</h3>
+{% endif %}
+
+{% if session.username %}
+    <h3>Logged in, {{ session.username }}</h3>
+    <a href="logout">Log out</a>
+{% else %}
+    <h2>Please log in!</h2>
+    <form name="RegistrationForm" action="/Assignment9" method="POST">
+        User Name: <input name="username" type="text">
+        password: <input name="password" type="password">
+        <input class="submit" type="submit" value="submit">
+    </form>
+{% endif %}
+{% endblock %}

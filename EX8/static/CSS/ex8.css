@@ -9,3 +9,10 @@ body{
 li{
     color: antiquewhite;
 }
+input{
+    border-radius: 5px;
+    height: 20px;
+}
+.submit{
+    height: 25px;
+}
