@@ -5,10 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> {% block title %}{% endblock %}</title>
-    <link rel="stylesheet" href="/static/CSS/ex8.css">
+    <link {% block css %} {% endblock %}>
 </head>
 <body>
 {% include 'header.html' %}
+<hr>
 {% block tohen %}
     <h1>Hello and Welcome :)</h1>
 {% endblock %}

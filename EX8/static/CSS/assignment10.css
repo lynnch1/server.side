@@ -2,7 +2,7 @@ header{
     font-size: 16px;
 }
 body{
-    background-color: cadetblue;
+    background-color: indianred;
     font-family: David;
     font-size: 20px;
 }
@@ -16,7 +16,6 @@ input{
 .submit{
     height: 25px;
 }
-
 .message{
-    color: hotpink;
+    color: white;
 }
