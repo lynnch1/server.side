@@ -26,7 +26,6 @@ def insert_user_func():
     interact_db(query=query, query_type='commit')
 
     #come back to users
-    session['message'] = 'user added!'
     return redirect('/assignment10')
 
 
@@ -42,7 +41,6 @@ def update_user_func():
     interact_db(query=query, query_type='commit')
 
     #come back to users
-    session['message'] = 'user updated!'
     return redirect('/assignment10')
 
 
@@ -52,5 +50,4 @@ def delete_user_func():
     query = "DELETE FROM users WHERE id='%s';" % user_id
     interact_db(query=query, query_type='commit')
 
-    session['message'] = 'user deleted!'
     return redirect('/assignment10')
