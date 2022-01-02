@@ -5,21 +5,21 @@
 {% endblock %}
 
 {% block css %}
- rel="stylesheet" href="static/CSS/assignment10.css"
+    rel="stylesheet" href="static/CSS/assignment10.css"
+{% endblock %}
+{% block js %}
+    src="static/JS/assignment10.js"
 {% endblock %}
 
 {% block tohen %}
     <h1>Welcome to Assignment 10 Page!</h1>
-        {% if session.message %}
-        <h3 class="message">{{ session.message }}</h3>
-    {% endif %}
 
     <h2>Insertion form</h2>
     <form action="/insert_user", method="post">
     <input type="text" name="name" placeholder="Name">
     <input type="email" name="email" placeholder="Email">
     <input type="password" name="password" placeholder="Password">
-    <input class="submit" type="submit" value="Insert">
+    <input class="submit" type="submit" value="Insert" onclick="insertionAlert()">
     </form>
 
     <h2>Update form</h2>
@@ -27,7 +27,7 @@
     <input type="text" name="name" placeholder="Name">
     <input type="email" name="email" placeholder="Email">
     <input type="password" name="password" placeholder="Password">
-    <input class="submit" type="submit" value="Update">
+    <input class="submit" type="submit" value="Update" onclick="updateAlert()">
     </form>
 
     <hr>
@@ -37,7 +37,7 @@
             <li>
                 <form action="/delete_user" method="post" style="display: inline">
                     <input type="hidden" name="id" value="{{ user.id }}">
-                    <input type="submit" value="Delete">
+                    <input type="submit" value="Delete" onclick="deletionAlert()">
                 </form>
                 {{ user.name }}, Email: {{ user.email }}</li>
         {% endfor %}
