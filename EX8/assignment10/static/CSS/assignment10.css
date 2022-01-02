@@ -1,0 +1,21 @@
+header{
+    font-size: 16px;
+}
+body{
+    background-color: indianred;
+    font-family: David;
+    font-size: 20px;
+}
+li{
+    color: antiquewhite;
+}
+input{
+    border-radius: 5px;
+    height: 20px;
+}
+.submit{
+    height: 25px;
+}
+.message{
+    color: white;
+}
