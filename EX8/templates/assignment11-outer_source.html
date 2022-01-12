@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Assignment 11 outer_source
+{% endblock %}
+
+{% block css %}
+ rel="stylesheet" href="/static/CSS/ex8.css"
+{% endblock %}
+
+
+{% block tohen %}
+
+<h1>Assignment 11 - Outer Source</h1>
+    <script src="../static/JS/assignment11.js"></script>
+    <h2>Req Frontend</h2>
+    Enter user ID: <input type="number" id="id">
+    <input type="submit" onclick="getUsers()" value="Get User"><br><br>
+
+    <main>
+
+    </main>
+
+    <h2>Req Backend</h2>
+    <form action="/assignment11/outer_source">
+        Enter user ID: <input type="number" name="number">
+        <input type="submit" value="Get User">
+    </form>
+
+    {% if user %}
+            <h3>User {{ user.data.id }}:</h3>
+            <img src="{{ user.data.avatar }}" alt="user pic">
+            <h4>Full name: {{ user.data.first_name }}  {{ user.data.last_name }}</h4>
+            <h4> Email: {{ user.data.email }}</h4>
+    {% endif %}
+
+{% endblock %}
